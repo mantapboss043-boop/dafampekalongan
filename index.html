@@ -278,9 +278,16 @@ footer{
 
 }
 
+.logo{
+    display:flex;
+    align-items:center;
+}
+
 .logo img{
-    height:60px;
+    height:clamp(40px, 4vw, 65px);
     width:auto;
+    max-width:220px;
+    object-fit:contain;
     display:block;
 }
 
