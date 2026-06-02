@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luxury Hotel & Convention</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f5f5f5;
+    color:#333;
+}
+
+/* HEADER */
+
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:1000;
+    background:rgba(0,0,0,.7);
+    backdrop-filter:blur(10px);
+}
+
+.navbar{
+    max-width:1400px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 30px;
+}
+
+.logo{
+    color:#fff;
+    font-size:28px;
+    font-weight:700;
+}
+
+.menu{
+    display:flex;
+    gap:30px;
+}
+
+.menu a{
+    color:#fff;
+    text-decoration:none;
+    font-weight:500;
+}
+
+.btn-book{
+    background:#d4af37;
+    color:#fff;
+    padding:12px 25px;
+    border-radius:30px;
+    text-decoration:none;
+}
+
+/* HERO */
+
+.hero{
+    height:100vh;
+    background:url('https://images.unsplash.com/photo-1566073771259-6a8506099945') center/cover;
+    position:relative;
+}
+
+.hero::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.45);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:#fff;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:64px;
+    max-width:900px;
+}
+
+.hero p{
+    margin-top:20px;
+    font-size:20px;
+    max-width:700px;
+}
+
+.hero-buttons{
+    margin-top:35px;
+    display:flex;
+    gap:20px;
+}
+
+.hero-buttons a{
+    padding:15px 35px;
+    border-radius:40px;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.btn-gold{
+    background:#d4af37;
+    color:#fff;
+}
+
+.btn-white{
+    background:#fff;
+    color:#333;
+}
+
+/* SECTION */
+
+section{
+    padding:90px 30px;
+}
+
+.container{
+    max-width:1300px;
+    margin:auto;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    font-size:42px;
+}
+
+.section-title p{
+    color:#666;
+}
+
+/* PROMO CARD */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:#fff;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:25px;
+}
+
+.card-content h3{
+    margin-bottom:10px;
+}
+
+.card-content p{
+    color:#666;
+    line-height:1.7;
+}
+
+.card-content a{
+    display:inline-block;
+    margin-top:15px;
+    text-decoration:none;
+    color:#d4af37;
+    font-weight:600;
+}
+
+/* BALLROOM */
+
+.ballroom{
+    background:#111;
+    color:#fff;
+}
+
+.ballroom-content{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.ballroom img{
+    width:100%;
+    border-radius:20px;
+}
+
+.ballroom h2{
+    font-size:48px;
+    margin-bottom:20px;
+}
+
+.ballroom p{
+    line-height:1.9;
+    color:#ddd;
+}
+
+/* CTA */
+
+.cta{
+    background:#d4af37;
+    text-align:center;
+    color:#fff;
+}
+
+.cta h2{
+    font-size:42px;
+}
+
+.cta p{
+    margin:15px 0 30px;
+}
+
+.cta a{
+    background:#fff;
+    color:#333;
+    text-decoration:none;
+    padding:15px 35px;
+    border-radius:30px;
+    font-weight:600;
+}
+
+/* FOOTER */
+
+footer{
+    background:#111;
+    color:#ccc;
+    text-align:center;
+    padding:30px;
+}
+
+@media(max-width:900px){
+
+.hero h1{
+    font-size:42px;
+}
+
+.ballroom-content{
+    grid-template-columns:1fr;
+}
+
+.menu{
+    display:none;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<header>
+    <div class="navbar">
+        <div class="logo">LUXURY HOTEL</div>
+
+        <div class="menu">
+            <a href="#">Home</a>
+            <a href="#">Rooms</a>
+            <a href="#">Restaurant</a>
+            <a href="#">Ballroom</a>
+            <a href="#">Contact</a>
+        </div>
+
+        <a href="#" class="btn-book">Book Now</a>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Experience Luxury, Comfort & Memorable Events</h1>
+        <p>
+            Nikmati pengalaman menginap terbaik, kuliner istimewa,
+            dan ballroom elegan untuk setiap acara spesial Anda.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#" class="btn-gold">Reserve Room</a>
+            <a href="#" class="btn-white">View Promotions</a>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Special Promotions</h2>
+            <p>Promo terbaik untuk tamu hotel dan pengunjung.</p>
+        </div>
+
+        <div class="cards">
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4">
+
+                <div class="card-content">
+                    <h3>Restaurant Promo</h3>
+                    <p>
+                        Diskon 25% untuk makan malam keluarga setiap
+                        Jumat dan Sabtu.
+                    </p>
+                    <a href="#">Learn More →</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3">
+
+                <div class="card-content">
+                    <h3>Wedding Package</h3>
+                    <p>
+                        Paket pernikahan lengkap dengan ballroom,
+                        catering dan dekorasi premium.
+                    </p>
+                    <a href="#">Learn More →</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945">
+
+                <div class="card-content">
+                    <h3>Staycation Offer</h3>
+                    <p>
+                        Menginap 2 malam gratis sarapan dan akses
+                        kolam renang.
+                    </p>
+                    <a href="#">Learn More →</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="ballroom">
+
+    <div class="container">
+
+        <div class="ballroom-content">
+
+            <img src="https://images.unsplash.com/photo-1511578314322-379afb476865">
+
+            <div>
+                <h2>Grand Ballroom</h2>
+
+                <p>
+                    Ballroom mewah dengan kapasitas hingga 1000 tamu,
+                    cocok untuk wedding, seminar, gathering perusahaan,
+                    dan acara sosial lainnya.
+                </p>
+
+                <br>
+
+                <a href="#" class="btn-book">
+                    Book Ballroom
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="cta">
+
+    <h2>Ready To Host Your Event?</h2>
+
+    <p>
+        Hubungi tim kami untuk reservasi kamar,
+        restoran, maupun ballroom.
+    </p>
+
+    <a href="#">Contact Sales</a>
+
+</section>
+
+<footer>
+    © 2026 Luxury Hotel & Convention Center
+</footer>
+
+</body>
+</html>
